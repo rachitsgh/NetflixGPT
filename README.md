@@ -1,7 +1,13 @@
 # NetflixGPT
 
--create-react-app
--configured Tailwind css
+- create-react-app
+- configured Tailwind css
+- Header
+- Routing of App
+- Login Form
+- SignUp Form 
+- Form validation
+- useRef Hooks
 
 # Features
 
