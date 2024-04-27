@@ -7,6 +7,8 @@ import { useNavigate } from 'react-router-dom';
 import { updateProfile } from 'firebase/auth';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import { USER_AVATAR } from '../utils/constant';
+import { sendEmailVerification } from 'firebase/auth';
 
 
 const Login = () => {
@@ -45,8 +47,13 @@ const Login = () => {
             .then((userCredential) => {
                 // Signed up 
                 const user = userCredential.user;
+                sendEmailVerification(auth.currentUser)
+                .then(() => {
+            // Email verification sent!
+            // ...
+            });
                 updateProfile(auth.currentUser, {
-                    displayName: Fname.current.value , photoURL: "https://occ-0-2590-2164.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABTZ2zlLdBVC05fsd2YQAR43J6vB1NAUBOOrxt7oaFATxMhtdzlNZ846H3D8TZzooe2-FT853YVYs8p001KVFYopWi4D4NXM.png?r=229"
+                    displayName: Fname.current.value , photoURL: USER_AVATAR
                   }).then(() => {
                     // Profile updated!
                     const uid = user.uid;
@@ -79,6 +86,7 @@ const Login = () => {
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
+                
                 // ...
                 // navigate("/browse");
             })
@@ -116,7 +124,7 @@ const Login = () => {
             <button ></button>
             </div>
             {errorMessage==="Password is not valid" && <p className='text-red-700 text-xs px-3'>Please enter a valid Password.</p>}
-            {console.log(errorMessage)}
+            {/* {console.log(errorMessage)} */}
             {(errorMessage==="Password is not valid" && errorMessage==="Email ID is not valid" && errorMessage!=null) && <p> errorMessage </p>}
             <button className='p-4 py-2 my-6 w-full bg-red-700 rounded-md ' onClick={handleButtonClick}>{isSignInForm?"Sign In":"Sign Up"}</button>
             <p className=' text-gray-400 '>{isSignInForm?"New to Netflix? ":"Already an User? "} <span className='text-white cursor-pointer hover:underline 'onClick={toggleSignInForm}>{isSignInForm?"Sign Up Now":"Sign In Now"}</span>

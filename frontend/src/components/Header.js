@@ -9,16 +9,20 @@ import { onAuthStateChanged } from 'firebase/auth';
 // import { Dispatch } from '@reduxjs/toolkit';
 import { UseDispatch } from 'react-redux';
 import { addUser,removeUser } from '../utils/userSlice';
+import { onLog } from 'firebase/app';
+import { LOGO_URL } from '../utils/constant';
+
 
 const Header = () => {
-  const [isHover,setIsHover]= useState(false);
+  const [isVerify,setIsVerify]=useState(false);
   const navigate = useNavigate( );
   const dispatch = useDispatch();
   // ConstantS
   const user = useSelector(store=>store.user);
 
   useEffect(()=>{
-    onAuthStateChanged(auth, (user) => {
+    
+    const unsubscribe=  onAuthStateChanged(auth, (user) => {
         if (user) {
           // User is signed in, see docs for a list of available properties
           // https://firebase.google.com/docs/reference/js/auth.user
@@ -29,7 +33,16 @@ const Header = () => {
             email:email,
             displayname:displayname,
             photoURL:photoURL}))
-          navigate("/browse");
+            if (user.emailVerified) {
+              // Email is verified
+              setIsVerify(true)
+              navigate("/browse");
+          } else {
+              // Email is not verified
+              
+              navigate("/Emailverification") // Optional: Automatically sign out
+          }
+          // navigate("/browse")
           // ...
         } else {
           navigate("/");
@@ -39,7 +52,9 @@ const Header = () => {
           // navigate("/");
         }
       });
-  },[])
+      //unsybscribe when component unmoubt
+      return ()=>unsubscribe();
+    },[])
 
 
   const HandleHover=()=>{
@@ -57,7 +72,7 @@ const Header = () => {
   return (
     <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between'>
       
-       <img className="w-44" src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png" alt='logo' />
+       <img className="w-44" src={LOGO_URL} alt='logo' />
        
        {user && <div className='flex p-2 gap-2'>
          <div className='flex-row justify-start '>
