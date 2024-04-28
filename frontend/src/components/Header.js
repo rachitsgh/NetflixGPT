@@ -33,16 +33,8 @@ const Header = () => {
             email:email,
             displayname:displayname,
             photoURL:photoURL}))
-            if (user.emailVerified) {
-              // Email is verified
-              setIsVerify(true)
-              navigate("/browse");
-          } else {
-              // Email is not verified
-              
-              navigate("/Emailverification") // Optional: Automatically sign out
-          }
-          // navigate("/browse")
+            
+          navigate("/browse")
           // ...
         } else {
           navigate("/");
