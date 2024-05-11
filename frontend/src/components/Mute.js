@@ -3,7 +3,7 @@ import React from 'react'
 function Mute() {
   return (
     <div>
-        <img src='../../' ></img>
+        <img src='' ></img>
     </div>
   )
 }

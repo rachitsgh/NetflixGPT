@@ -7,7 +7,8 @@ import useVideoTrailer from '../hooks/useMovieTrailer'
 function MainContainer() {
     const movies = useSelector(store => store.movies?.nowPlayingMovies)
     // useVideoTrailer()
-    if(movies==null) return;
+    // console.log(movies)
+    if(movies.length==0) return;
 
     const mainMovie =movies[4];
     const {id,original_title,overview}=mainMovie;

@@ -5,7 +5,7 @@ import useNowPlayingMovies from '../hooks/useNowPlayingMovies'
 
 function SecondaryContainer() {
   const movies = useSelector(store=>store.movies)
-  // console.log(movies)
+  // console.log(movies.nowPlayingMovies)
   return (
     <div>
       <MovieList title={"now Playing"} movies={movies.nowPlayingMovies}/>
