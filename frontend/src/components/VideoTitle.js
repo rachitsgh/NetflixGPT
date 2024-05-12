@@ -8,7 +8,7 @@ function VideoTitle({title,overview}) {
     setAudioIcon(!audioIcon);
   }
   return (
-    <div className='w-screen aspect-video pt-[25%] px-24 text-white absolute bg-gradient-to-r from-black '>
+    <div className='w-screen aspect-video pt-[15%] px-24 text-white absolute bg-gradient-to-r from-black '>
         <h1 className='text-6xl font-bold'>{title}</h1>
         <p className='p-6 text-lg w-2/4' >{overview}</p>
         <div className='flex'>
