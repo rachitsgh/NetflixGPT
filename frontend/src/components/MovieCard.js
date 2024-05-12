@@ -1,13 +1,13 @@
 import React from 'react'
 import { IMG_CDN_URL } from '../utils/constant'
 
-function MovieCard({movies}) {
-  console.log(movies);
-  console.log(movies[0])
+function MovieCard({Movie_title,poster_path}) {
+  // console.log(movies);
+  // console.log(movies[0]?.title)
   return (
-    <div>
-      {/* <img alt={movies[0].title} */}
-      {/* // src={IMG_CDN_URL+movies[0].poster_path}/> */}
+    <div className='w-48 pr-4'>
+      <img alt={Movie_title}
+      src={IMG_CDN_URL+poster_path}/>
     </div>
   )
 }
