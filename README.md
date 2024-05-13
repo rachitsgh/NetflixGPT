@@ -29,6 +29,19 @@
 - Update Store with Trailer Video Data
 - Embedded the Yotube video and make it autoplay and mute
 - Tailwind Classes to make Main Container look awesome
+- Built Secondary Component
+- Built Movie List
+- Built Movie Card
+- Added TMDB img url
+- Made the browse page amazing with tailwind css
+- built usePopularMovies custom hook
+- built useTopRatedMovies custom hook
+- built useUpcomingMovies custom hook
+- GPT SearchPage
+- GPT SearchBar
+- Multi-language Feature
+- Integrated GPT API
+- NPM OPEn Ai
 
 # Features
 
