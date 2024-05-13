@@ -23,6 +23,10 @@ const Body = () => {
         {
           path:"/Emailverification",
           element:<EmailVerification/>
+        },
+        {
+          path:"NoMovieFound",
+          element:"",
         }
     
       ]);
