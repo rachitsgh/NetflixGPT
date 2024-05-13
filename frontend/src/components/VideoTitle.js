@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import Mute from './Mute';
+import { UseSelector, useSelector } from 'react-redux';
+import lang from '../utils/languageConstants';
 
 function VideoTitle({title,overview}) {
   const [audioIcon,setAudioIcon]=useState(true)
+  const langKey = useSelector(store=>store.config.lang);
 
   const handleAudioTrailer=()=>{
     setAudioIcon(!audioIcon);
@@ -12,7 +15,7 @@ function VideoTitle({title,overview}) {
         <h1 className='text-6xl font-bold'>{title}</h1>
         <p className='p-6 text-lg w-2/4' >{overview}</p>
         <div className='flex'>
-            <button className='bg-white text-black  p-[0.5rem] px-10 w-15 text-xl hover:bg-opacity-65 gap-2 rounded-md'> ▶ Play</button>
+            <button className='bg-white text-black  p-[0.5rem] px-10 w-15 text-xl hover:bg-opacity-65 gap-2 rounded-md'> ▶ {lang[langKey].play}</button>
             <button className='flex justify-between p-[0.5rem] items-center hover:bg-opacity-35 bg-gray-600 bg-opacity-50 text-white p-4 px-10 w-15 rounded-md mx-2 text-xl '>
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
@@ -20,7 +23,7 @@ function VideoTitle({title,overview}) {
                     </path></g></g>
                     </svg>
                 </div>
-                More info
+                {lang[langKey].moreInfo}
             </button>
             <button><Mute/></button>
         </div>
