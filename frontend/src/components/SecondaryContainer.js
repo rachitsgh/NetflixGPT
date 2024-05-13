@@ -12,9 +12,9 @@ function SecondaryContainer() {
     <div className=' bg-black'>
       <div className='-mt-52 z-50 relative'>
         <MovieList title={"now Playing"} movies={movies.nowPlayingMovies}/>
-        <MovieList title={"Top Rated"} movies={movies.topRatedMovies}/>
-        <MovieList title={"Popular"} movies={movies.popularMovies}/>
-        <MovieList title={"Up Coming"} movies={movies.upcomingMovies}/>
+        <MovieList title={"Top Rated Movies"} movies={movies.topRatedMovies}/>
+        <MovieList title={"Popular Movies"} movies={movies.popularMovies}/>
+        <MovieList title={"Up Coming Movies"} movies={movies.upcomingMovies}/>
       </div>
       {/* 
         MovieList - Popular
