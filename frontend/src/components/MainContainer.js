@@ -8,9 +8,9 @@ function MainContainer() {
     const movies = useSelector(store => store.movies?.nowPlayingMovies)
     // useVideoTrailer()
     // console.log(movies)
-    if(movies.length==0) return;
+    if(movies.length===0) return;
 
-    const mainMovie =movies[4];
+    const mainMovie =movies[1];
     const {id,original_title,overview}=mainMovie;
     // console.log(mainMovie)
    
