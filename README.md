@@ -1,5 +1,7 @@
 # NetflixGPT
 
+![Demo](https://youtu.be/cJWigtUCOAg?si=g2YPbMJh_iyuPYaw)
+
 - create-react-app
 - configured Tailwind css
 - Header
