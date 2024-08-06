@@ -1,6 +1,6 @@
 # NetflixGPT
 
-![Demo](https://youtu.be/cJWigtUCOAg?si=g2YPbMJh_iyuPYaw)
+[![Project Demo]()](https://youtu.be/cJWigtUCOAg)
 
 - create-react-app
 - configured Tailwind css
