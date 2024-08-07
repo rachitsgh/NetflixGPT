@@ -8,7 +8,7 @@
 [![Project Demo]()](https://youtu.be/cJWigtUCOAg)
 
 
-<h4><a href="https://docs.google.com/document/d/1MRehXp7JD-H75svdetxAA1FSRX53Kw5fxd2pwIscPZE/"> High Level Design </a> <span>  · </span> <a href="https://docs.google.com/document/d/13_4E29XlWuXX90MhpUhNrjjClzJthUMIwcBSlA13YEc/edit?usp=sharing"> Low Level Design </a> <span> · </span> <a href="https://github.com/rachitsgh/NetflixGPT/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/rachitsgh/NetflixGPT/issues"> Request Feature </a> </h4>
+<h4><a href="https://docs.google.com/document/d/1MRehXp7JD-H75svdetxAA1FSRX53Kw5fxd2pwIscPZE/"> High Level Design </a> <span>  · </span> <a href="https://docs.google.com/document/d/1AYPz0O5CtxGiedfSvLvJaGWHzmupCpC1FrryovQ06p0/edit?usp=sharing"> Low Level Design </a> <span> · </span> <a href="https://github.com/rachitsgh/NetflixGPT/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/rachitsgh/NetflixGPT/issues"> Request Feature </a> </h4>
 
 </div>
 
