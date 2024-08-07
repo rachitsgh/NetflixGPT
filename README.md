@@ -91,7 +91,7 @@ npm start
 
 ## :handshake: Contact
 
-Rachit Pathakk- - rachitpathakk@gmail.com
+Rachit Pathak- - rachitpathakk@gmail.com
 
 
 # Features
