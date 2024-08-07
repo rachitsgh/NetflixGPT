@@ -44,11 +44,11 @@
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`VITE_OPENAPI_KEY`
+`OPENAPI_KEY`
 
-`VITE_TMDB_KEY`
+`TMDB_KEY`
 
-`VITE_FIRE_BASE_API_KEY`
+`IRE_BASE_API_KEY`
 
 ## :toolbox: Getting Started
 
